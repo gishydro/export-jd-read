@@ -139,7 +139,9 @@ const getCssTextFromUrls = async (urls) => {
  */
 const fetchBookById = async (bookId) => {
   const res = await fetch(
-    `https://gx.jd.com/gx/gx_bookDetail.action?bookId=${bookId}`,
+   // 原地址已失效，更新图书信息地址，否则无法获取书籍信息，书名为空，书籍打包失败
+    //`https://gx.jd.com/gx/gx_bookDetail.action?bookId=${bookId}`,
+    `https://tob.jd.com/gx/gx_bookDetail.action?bookId=${bookId}`,
     {
       ...ajaxOptions,
       method: "GET",
